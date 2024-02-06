@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://ww.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" th:href="@{/css/index.css}">
+  <link rel="stylesheet" th:href="@{/css/upload.css}">
+</head>
+<body>
+<header>
+  <div class="inner">
+    <ul class="menu">
+      <li><h1><a href="http://localhost:8080">Picture<span class="material-icons">photo_camera</span>Archive</a></h1></li>
+      <li th:if="${session.loginTag == 'YES'}"><a href="/html/pic/upload">사진 업로드</a></li>
+      <li><a href="/html/pic/getAll">사진 커뮤니티</a></li>
+      <li th:if="${session.loginTag == 'YES'}" ><a href="/html/user/users">회원 리스트</a></li>
+      <li th:if="${session.loginTag != 'YES'}" ><a href="/html/user/login">로그인</a></li>
+      <li th:if="${session.loginTag == 'YES'}" ><a href="/html/user/logout">로그아웃</a></li>
+      <li th:if="${session.loginTag != 'YES'}"><a href="/html/user/userForm">회원가입</a></li>
+    </ul>
+  </div>
+</header>
+<section>
+  <div class=upload>
+    <h2>당신의 사진을 공유하세요!</h2>
+    <form method="post" action="/html/pic/picRegister" enctype="multipart/form-data">
+      <input type="file" name="fileOne" >
+      <input type="text" name="title" placeholder="사진 제목">
+      <input type="text" name="description" placeholder="사진 설명">
+
+      <input type="submit" value="사진 업로드">
+    </form>
+  </div>
+</section>
+<footer>
+  <div class=footer>
+    <p>
+      <a href="/">Picture<span class="material-icons">photo_camera</span>Archive</a>
+      <span>email : picturearchive@gmail.com</span>
+      <span>Copyright 2023. PictureArchive. All rights reserved.</span>
+    </p>
+  </div>
+</footer>
+<script src="/js/home.js" ></script>
+</body>
+</html>

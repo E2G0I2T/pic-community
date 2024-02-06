@@ -1,0 +1,26 @@
+.list {
+  text-align: center;
+}
+
+.list h2 {
+  padding: 20px 0 20px 0;;
+  font-size: 200%;
+  border-bottom: 1px solid gray;
+}
+
+.list table {
+  margin: 0 auto;
+}
+
+.list table tr {
+    border: 1px solid black;
+    background-color: #fbe4e4;
+}
+
+.list table th {
+    border-right:1px solid black;
+}
+
+.list table td {
+    border-right:1px solid black;
+}

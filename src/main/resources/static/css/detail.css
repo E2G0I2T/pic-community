@@ -1,0 +1,14 @@
+.detail {
+  text-align: center;
+}
+
+.detail h2 {
+    padding: 20px 0 20px 0;
+     font-size: 200%;
+     border-bottom: 1px solid gray;
+}
+
+.detail img {
+      object-fit: cover;
+      width 100%;
+}

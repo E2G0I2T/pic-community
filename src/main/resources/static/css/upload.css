@@ -1,0 +1,27 @@
+.upload {
+  text-align: center;
+}
+
+.upload h2 {
+  padding: 20px 0 20px 0;;
+  font-size: 200%;
+  border-bottom: 1px solid gray;
+}
+
+.upload form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+
+.upload form input {
+  padding: 0;
+  width: 300px;
+  height: 30px;
+}
+
+.upload form input[type=submit] {
+  background-color: orange;
+}
